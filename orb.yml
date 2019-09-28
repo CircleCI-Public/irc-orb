@@ -1,10 +1,10 @@
 version: 2.1
 
-description: "Send custom IRC notifications from CircleCI. [Github Repo](https://github.com/CircleCI-Public/irc-orb)"
+description: "Send custom IRC notifications from CircleCI."
 
 commands:
   notify:
-    description: "Send a custom message to an IRC channel or user."
+    description: "Send a custom message to an IRC channel or user. [Github Repo](https://github.com/CircleCI-Public/irc-orb)"
     parameters:
       server:
         description: "The IRC server to connect to. Defaults to the environment variable 'IRC_SERVER'."
