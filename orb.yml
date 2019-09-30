@@ -1,6 +1,6 @@
 version: 2.1
 
-description: "Send custom IRC notifications from CircleCI."
+description: "Send custom IRC notifications from CircleCI. Link : https://circleci.com/orbs/registry/orb/circleci/irc"
 
 commands:
   notify:
