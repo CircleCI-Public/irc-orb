@@ -1,6 +1,8 @@
 version: 2.1
 
-description: "Send custom IRC notifications from CircleCI."
+description: |
+  Send custom IRC notifications from CircleCI.
+  Orb Source: https://github.com/CircleCI-Public/irc-orb/
 
 commands:
   notify:
