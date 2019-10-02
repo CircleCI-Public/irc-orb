@@ -1,4 +1,4 @@
-# IRC Orb [![CircleCI Build Status](https://circleci.com/gh/cci-orbs/irc.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/cci-orbs/irc) [![CircleCI Orb Version](https://img.shields.io/badge/endpoint.svg?url=https://badges.circleci.io/orb/circleci/irc)][reg-page] [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/cci-orbs/irc/master/LICENSE)
+# IRC Orb [![CircleCI Build Status](https://circleci.com/gh/cci-orbs/irc.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/cci-orbs/irc) [![CircleCI Orb Version](https://img.shields.io/badge/endpoint.svg?url=https://badges.circleci.io/orb/circleci/irc)][reg-page] [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/cci-orbs/irc/master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
 
 An IRC Orb for CircleCI.
 This orb allows you to send build notifications to an IRC channel.
