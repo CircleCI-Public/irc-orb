@@ -8,6 +8,10 @@ parameters:
     description: "IRC server port. Defaults to 6667."
     type: integer
     default: 6667
+  pass:
+    description: "Name of the environment variable containing the IRC server password."
+    type: env_var_name
+    default: IRC_SERVER_PASSWORD
   channel:
     description: "The IRC channel to post in."
     type: string
@@ -34,4 +38,13 @@ steps:
           exit 1
         fi
 
-        echo -e 'USER << parameters.nick >> 8 * : << parameters.nick >>\nNICK << parameters.nick >>\nJOIN #<< parameters.channel >>\nPRIVMSG #<< parameters.channel >> :<< parameters.message >>\nQUIT\n' | nc << parameters.server >> << parameters.port >>
+        (
+          if [[ -n "${<< parameters.pass >>}" ]]; then
+            echo "PASS ${<< parameters.pass >>}"
+          fi
+          echo 'USER << parameters.nick >> 8 * : << parameters.nick >>'
+          echo 'NICK << parameters.nick >>'
+          echo 'JOIN #<< parameters.channel >>'
+          echo 'PRIVMSG #<< parameters.channel >> :<< parameters.message >>'
+          echo QUIT
+        ) | nc << parameters.server >> << parameters.port >>
