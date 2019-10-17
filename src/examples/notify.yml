@@ -1,0 +1,26 @@
+description: >
+  Send a notification to an IRC channel
+
+usage:
+  version: 2.1
+
+  orbs:
+    irc: circleci/irc@x.y.z
+
+  jobs:
+    build:
+      docker:
+        - image: your-image
+      steps:
+        - checkout
+        - irc/notify:
+            server: 127.0.0.1
+            port: 6667
+            channel: circle-notify
+            nick: circleci-bot
+            message: "Build completed!"
+
+  workflows:
+    your-workflow:
+      jobs:
+        - build
